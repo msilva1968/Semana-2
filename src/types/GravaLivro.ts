@@ -14,11 +14,10 @@ const Grava = {
     getGruposTransacoes(): GrupoTransacao[] {
         const gruposTransacoes: GrupoTransacao[] = [];
         const listaTransacoes: TransacaoLivro[] = structuredClone(transacoes);
-        const transacoesOrdenadas: TransacaoLivro[] = listaTransacoes.sort((t1, t2) => t2.publicacao.getTime() - t1.publicacao.getTime());
         let labelAtualGrupoTransacao: string = "";
 
-        for (let transacao of transacoesOrdenadas) {
-            let labelGrupoTransacao: string = transacao.publicacao.toLocaleDateString("pt-br", { month: "long", year: "numeric" });
+        for (let transacao of listaTransacoes) {
+            let labelGrupoTransacao: string = "A";
             if (labelAtualGrupoTransacao !== labelGrupoTransacao) {
                 labelAtualGrupoTransacao = labelGrupoTransacao;
                 gruposTransacoes.push({
