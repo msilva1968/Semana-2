@@ -1,7 +1,5 @@
 import Conta from "../types/GravaCategoria.js";
-import { FormatoData } from "../types/FormatoData.js";
 import { GrupoCategoria } from "../types/GrupoCategoria.js";
-import { formatarData } from "../utils/formatters.js";
 
 const elementoRegistroTransacoesExtrato: HTMLElement = document.querySelector(".extrato .registro-transacoes");
 

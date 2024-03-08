@@ -1,6 +1,4 @@
 import Conta from "../types/GravaLivro.js";
-import { FormatoData } from "../types/FormatoData.js";
-import { formatarData } from "../utils/formatters.js";
 const elementoRegistroTransacoesExtrato = document.querySelector(".extrato .registro-transacoes");
 renderizarExtrato();
 function renderizarExtrato() {
@@ -9,12 +7,12 @@ function renderizarExtrato() {
     let htmlRegistroTransacoes = "";
     for (let grupoTransacao of gruposTransacoes) {
         let htmlTransacaoItem = "";
-        for (let transacao of grupoTransacao.transacoes) {
+        for (let transacao of grupoTransacao.livros) {
             htmlTransacaoItem += `
                 <div class="transacao-item">
                         <span class="tipo"><strong>Título:</strong> ${transacao.titulo}<BR>
                                            <strong>Autor: </strong>${transacao.autor}<BR>
-                                           <strong>Publicação: </strong>${formatarData(transacao.publicacao, FormatoData.PADRAO)}<BR><BR>
+                                           <strong>Publicação: </strong>${transacao.publicacao}<BR><BR>
                         </span>
                 </div>
             `;

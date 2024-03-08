@@ -9,7 +9,7 @@ export function ValidarISBN(valor: string){
 
     for (let grupoTransacao of gruposTransacoes)
     {
-        for (let transacao of grupoTransacao.transacoes)
+        for (let transacao of grupoTransacao.livros)
         {
            if (isbn === transacao.isbn){
              return true;

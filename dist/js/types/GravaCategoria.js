@@ -1,20 +1,12 @@
-const categorias = JSON.parse(localStorage.getItem("categoria"), (key, value) => {
-    return value;
-}) || [];
+const categorias = JSON.parse(localStorage.getItem("tbcategorias")) || [];
 const Grava = {
     getGruposTransacoes() {
         const gruposTransacoes = [];
         const listaTransacoes = structuredClone(categorias);
-        let labelAtualGrupoTransacao = "";
+        gruposTransacoes.push({
+            categorias: []
+        });
         for (let transacao of listaTransacoes) {
-            let labelGrupoTransacao = "A";
-            if (labelAtualGrupoTransacao !== labelGrupoTransacao) {
-                labelAtualGrupoTransacao = labelGrupoTransacao;
-                gruposTransacoes.push({
-                    label: labelGrupoTransacao,
-                    categorias: []
-                });
-            }
             gruposTransacoes.at(-1).categorias.push(transacao);
         }
         return gruposTransacoes;
@@ -22,7 +14,7 @@ const Grava = {
     registrarTransacao(novaTransacao) {
         categorias.push(novaTransacao);
         console.log(this.getGruposTransacoes());
-        localStorage.setItem("transacoes", JSON.stringify(categorias));
+        localStorage.setItem("tbcategorias", JSON.stringify(categorias));
     }
 };
 export default Grava;
