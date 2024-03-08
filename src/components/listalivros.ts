@@ -21,7 +21,7 @@ function renderizarExtrato(): void {
                 <div class="transacao-item">
                         <span class="tipo"><strong>Título:</strong> ${transacao.titulo}<BR>
                                            <strong>Autor: </strong>${transacao.autor}<BR>
-                                           <strong>Publicação: </strong>${transacao.publicacao}<BR><BR>
+                                           <strong>Publicação: </strong>${formatarData(transacao.publicacao, FormatoData.PADRAO)}<BR><BR>
                         </span>
                 </div>
             `;
