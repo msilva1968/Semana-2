@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro Books</title>
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+</head>
+<body>
+    <main class="container-padding flex">
+
+        <div class="coluna-central">
+            <section class="block-nova-transacao">
+                <h2>Cadastrando Livros</h2>
+                <form action="" method="post" novalidate>
+                    <div class="campo">
+                        <label for="valor">Título:</label><br>
+                        <input type="text" name="titulo" id="titulo" class="campo-input" required />
+                    </div>
+                    <div class="campo">
+                        <label for="valor">Sinopse:</label><br>
+                        <textarea name="sinopse" id="sinopse" class="campo-textarea" rows="5" cols="55" required></textarea>
+                    </div>
+                    <div class="campo">
+                        <label for="valor">Sumário:</label><br>
+                        <input type="text" name="sumario" id="sumario" class="campo-input" required />
+                    </div>
+                    <div class="campo">
+                        <label for="valor">Preço:</label><br>
+                        <input type="number" name="preco" id="preco" class="campo-input-number"  step="0.01" required />
+                    </div>
+                    <div class="campo">
+                        <label for="valor">Nº de Páginas:</label><br>
+                        <input type="number" name="paginas" id="paginas" class="campo-input-number" required />
+                    </div>
+                    <div class="campo">
+                        <label for="valor">ISBN:</label><br>
+                        <input type="text" name="isbn" id="isbn" class="campo-input" required />
+                    </div>
+                    <div class="campo">
+                        <label for="valor">Data de Publicação:</label><br>
+                        <input type="date" name="publicacao" id="publicacao" class="campo-input-date" required />
+                    </div>
+                    <div class="campo">
+                        <label for="valor">Categoria:</label><br>
+                        <input type="text" name="categoria" id="categoria" class="campo-input" required />
+                    </div>
+                    <div class="campo">
+                        <label for="valor">Autor:</label><br>
+                        <input type="text" name="autor" id="autor" class="campo-input" required />
+                    </div>
+                    <div class="campo">
+                        <button type="submit" class="btn">
+                            Cadastrar Livro
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <aside class="extrato">
+            <h3>Listando Livros</h3>
+            <div class="registro-transacoes">
+                <div class="transacoes-group">
+                    <strong class="mes-group"></strong>
+                    <div class="transacao-item">
+                        <div class="transacao-info">
+                            <span class="tipo"></span>
+                            <strong class="valor"></strong>
+                        </div>
+                        <time class="data"></time>
+                    </div>
+                    <div class="transacao-item">
+                        <div class="transacao-info">
+                            <span class="tipo"></span>
+                            <strong class="valor"></strong>
+                        </div>
+                        <time class="data"></time>
+                    </div>
+                </div>
+
+                <div class="transacoes-group">
+                    <strong class="mes-group"></strong>
+                    <div class="transacao-item">
+                        <div class="transacao-info">
+                            <span class="tipo"></span>
+                            <strong class="valor"></strong>
+                        </div>
+                        <time class="data"></time>
+                    </div>
+                    <div class="transacao-item">
+                        <div class="transacao-info">
+                            <span class="tipo"></span>
+                            <strong class="valor"></strong>
+                        </div>
+                        <time class="data"></time>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
