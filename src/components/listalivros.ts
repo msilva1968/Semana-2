@@ -16,12 +16,13 @@ function renderizarExtrato(): void {
         let htmlTransacaoItem: string = "";
         for (let transacao of grupoTransacao.livros)
         {
+//            <strong>Publicação: </strong>${formatarData(transacao.publicacao, FormatoData.PADRAO)}<BR><BR>
 
             htmlTransacaoItem += `
                 <div class="transacao-item">
                         <span class="tipo"><strong>Título:</strong> ${transacao.titulo}<BR>
                                            <strong>Autor: </strong>${transacao.autor}<BR>
-                                           <strong>Publicação: </strong>${formatarData(transacao.publicacao, FormatoData.PADRAO)}<BR><BR>
+                                           <strong>Publicação: </strong>${transacao.publicacao}<BR><BR>
                         </span>
                 </div>
             `;
